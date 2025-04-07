@@ -14,21 +14,21 @@ function iniciarJogo() {
     }
 
     console.log("Agora,o Array personagem contém: " + personagem)
-    console.log("Início Vilões" + viloes)
+    console.log("Início Vilões: " + viloes)
 
     for(let i = 0; i < 3; i++) {
         indiceAleatorio = Math.floor(Math.random() * 10)
         viloesPossiveis = 
-            ["Malenia, Blade of Miquella",
+            ["Malenia - Blade of Miquella",
              "Slave Knight Gael",
              "Orphan of Kos",
-             "Mohg, Lord of Blood",
+             "Mohg - Lord of Blood",
              "Elden Beast",
              "Dragonlord Placidusax",
-             "Maliketh, the Black Blade",
+             "Maliketh - the Black Blade",
              "Demon of Hatred",
              "Laxasia",
-             "Radahn, Consort of Miquella"
+             "Radahn - Consort of Miquella"
             ]
 
         viloes[i] = viloesPossiveis[indiceAleatorio]
@@ -55,6 +55,7 @@ function iniciarJogo() {
 
     // Exibe os nomes no HTML
     document.getElementById("informacoesJogador").innerText = "Seus heróis: " + personagem.join(", ");
+    document.getElementById("informacoesViloes").innerText = "Vilões sorteados: " + viloes.join(", ");
 }
 
 document.getElementById("comecarJogoBtn").addEventListener("click", iniciarJogo);
