@@ -9,10 +9,11 @@ function iniciarJogo() {
         personagem[i] = escolhaPersonagem;
     }
     console.log("Agora,o Array personagem contém: " + personagem)
+    console.log("Início Vilões" + viloes)
 
     for(let i = 0; i < 3; i++) {
         indiceAleatorio = Math.floor(Math.random() * 10)
-        vilõesPossiveis = 
+        viloesPossiveis = 
             ["Malenia, Blade of Miquella",
              "Slave Knight Gael",
              "Orphan of Kos",
@@ -24,7 +25,11 @@ function iniciarJogo() {
              "Laxasia",
              "Radahn, Consort of Miquella"
         ]
+        
+        viloes[i] = viloesPossiveis[indiceAleatorio]
     }
+
+    console.log("Final Vilões" + viloes)
 
 
 
