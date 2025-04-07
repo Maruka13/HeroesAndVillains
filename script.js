@@ -43,7 +43,12 @@ function iniciarJogo() {
         alert("Seu time é muito forte! Você venceu a guerra contra os vilões. Sua força foi " + forcaPersonagem)
     }
     else {
-        alert("Seu time está fraco! Você perdeu a guerra contra os vilões que timam força " + forcaViloes)
+        if (forcaPersonagem < forcaViloes) {
+            alert("Seu time está fraco! Você perdeu a guerra contra os vilões de força " + forcaViloes)
+        }
+        else {
+            alert("Os dois times têm a mesma força, vocês empataram!")
+        }
     }
 
 
