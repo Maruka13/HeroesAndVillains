@@ -7,8 +7,8 @@ function iniciarJogo() {
     for(let i = 0; i < 3; i++) {
         let escolhaPersonagem = prompt("Digite o nome do seu Herói " + (i + 1) + ":");
         personagem[i] = escolhaPersonagem;
-        
-        //calcular força do herói dps soma do time todo
+
+        //calcular força dos heróis
         forcaPersonagem = forcaPersonagem + Math.floor(Math.random() * 10) +1       // maneira avançada: forcaPersonagem += Math.floor(Math.random() * 10) +1
        
     }
@@ -32,9 +32,17 @@ function iniciarJogo() {
             ]
 
         viloes[i] = viloesPossiveis[indiceAleatorio]
+
+        //calc de força dos vilões do pc
+        forcaViloes = forcaViloes + Math.floor(Math.random() * 10) +1  
     }
 
-    console.log("Final Vilões" + viloes)
+    console.log("Final Vilões:" + viloes)
+
+    if (forcaPersonagem > forcaViloes) {
+        alert("Seu time é muito forte! Você venceu a guerra contra os vilões. Sua força foi " + forcaPersonagem)
+    }
+   
 
 
 
