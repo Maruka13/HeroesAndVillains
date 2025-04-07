@@ -7,7 +7,12 @@ function iniciarJogo() {
     for(let i = 0; i < 3; i++) {
         let escolhaPersonagem = prompt("Digite o nome do seu Herói " + (i + 1) + ":");
         personagem[i] = escolhaPersonagem;
+        
+        //calcular força do herói dps soma do time todo
+        forcaPersonagem = forcaPersonagem + Math.floor(Math.random() * 10) +1       // maneira avançada: forcaPersonagem += Math.floor(Math.random() * 10) +1
+       
     }
+
     console.log("Agora,o Array personagem contém: " + personagem)
     console.log("Início Vilões" + viloes)
 
@@ -24,8 +29,8 @@ function iniciarJogo() {
              "Demon of Hatred",
              "Laxasia",
              "Radahn, Consort of Miquella"
-        ]
-        
+            ]
+
         viloes[i] = viloesPossiveis[indiceAleatorio]
     }
 
